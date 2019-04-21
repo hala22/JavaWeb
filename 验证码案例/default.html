@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>宁宁最棒！</title>
+	
+	<script type="text/javascript">
+		function change(){
+			var img=document.getElementById("img_1");
+			var date=new Date().getTime();
+			img.src="doAdd?"+date;//保证得到的验证码是最新的
+			return false;//阻止事件传递
+		}
+	</script>
+</head>
+
+<body>
+	<input type="text"/>
+	<img id="img_1" src="doAdd"/>
+	<a href='#' onclick="change()">看不清，换一个</a><br/>
+	<input type="submit" values="提交"/>
+</body>
+</html>
